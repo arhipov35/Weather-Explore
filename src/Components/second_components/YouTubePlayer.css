@@ -1,0 +1,97 @@
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 80px;
+  height: 4px;
+  background: lightgrey;
+  border-radius: 8px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  position: relative;
+}
+
+/* input[type="range"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: grey;
+  border-radius: 5px;
+  z-index: 1;
+} */
+
+/* Стиль для повзунка (thumb) у браузерах на основі WebKit */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: background 0.2s, border-color 0.2s, background-color 0.2s;
+  z-index: 2;
+  position: relative;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  border: 1px solid grey;
+  background-color: white;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  border: none;
+  background: black;
+}
+
+/* Mozilla браузери */
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: background 0.2s, border-color 0.2s, background-color 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background-color: white;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background: black;
+}
+
+/* Microsoft браузери */
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: background 0.2s, border-color 0.2s, background-color 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+input[type="range"]:hover::-ms-thumb {
+  background-color: white;
+}
+
+input[type="range"]:active::-ms-thumb {
+  background: black;
+}
+
+.music-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 8px;
+}
+.range {
+  display: flex;
+  padding: 6px 8px;
+  align-items: center;
+}

@@ -1,0 +1,111 @@
+.list-color {
+  list-style: none;
+}
+.item-color {
+  cursor: pointer;
+}
+.item-color:hover .text-color {
+  color: black;
+}
+.main-option {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.text-color {
+  color: var(--Black-44, rgba(0, 0, 0, 0.44));
+
+  /* Body */
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.08px;
+  transition: color 0.2s;
+}
+.dropdown-toggle {
+  position: relative;
+}
+/* Сховати стандартний стрілку Bootstrap */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* Додати SVG-елемент по центру кнопки */
+.dropdown-toggle.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 6px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"%3E%3Cpath d="M1 1L5 5L9 1" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')
+    no-repeat center center;
+  background-size: contain;
+  /* opacity: 1; */
+}
+.dropdown-toggle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 6px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"%3E%3Cpath d="M1 1L5 5L9 1" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')
+    no-repeat center center;
+  background-size: contain;
+  /* opacity: 0; */
+  transition: opacity 0.2s linear;
+}
+.dropdown-toggle:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 6px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"%3E%3Cpath d="M1 1L5 5L9 1" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')
+    no-repeat center center;
+  background-size: contain;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+.drop-style {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.drop-style:hover {
+  background: var(--Black-4, rgba(0, 0, 0, 0.04));
+  transition: background 0.3s;
+}
+
+/* .drop-style:hover::after {
+  display: none;
+}
+.dropdown-toggle::after {
+  display: none;
+} */
+.drop-menu-style {
+  border-radius: 8px;
+  border: 1px solid var(--Black-4, rgba(0, 0, 0, 0.04));
+  background: var(--White-White, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+.dropdown-toggle.active {
+  background: var(--Black-4, rgba(0, 0, 0, 0.04));
+}

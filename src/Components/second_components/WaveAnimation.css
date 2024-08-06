@@ -1,0 +1,59 @@
+
+@keyframes moveWave {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes stopWave {
+  100% {
+    transform: translateX(0%);
+  }
+}
+.wave-container {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 56px;
+  background: var(--Black-4, rgba(0, 0, 0, 0.04));
+  overflow: hidden;
+}
+
+.wave-second {
+  display: flex;
+  width: 24px;
+  height: 17px;
+  padding: 5px 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.wave {
+  animation: moveWave 3s linear infinite;
+  box-sizing: content-box;
+}
+
+.playing .wave {
+  animation-play-state: running;
+}
+
+.paused .wave {
+  animation-play-state: paused;
+  animation: stopWave 1s linear;
+}
+
+.wave-path {
+  transition: d 0.5s ease, stroke 0.5s ease; /* Додаємо перехід для stroke */
+}

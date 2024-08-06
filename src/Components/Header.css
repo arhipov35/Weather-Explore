@@ -1,0 +1,127 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+.navbar-brand {
+  color: var(--Black-30, rgba(0, 0, 0, 0.3));
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.3px;
+}
+.dropdown-menu {
+  border: none;
+  min-width: auto !important;
+}
+.dropdown-item {
+  color: var(--Black-44, rgba(0, 0, 0, 0.44));
+  /* Body */
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.08px;
+  display: flex;
+  padding: 8px 12px !important;
+  align-items: center;
+  gap: 8px !important;
+  align-self: stretch !important;
+}
+.dropdown-item p {
+  /* Body */
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.08px;
+  margin: 0;
+  flex: 1 0 0;
+}
+.dropdown-item .active {
+  color: var(--Black-100, #000);
+}
+
+.no-arrow::after {
+  display: none;
+}
+.img-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 5px 2px 4px 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray-back {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.gray-back:hover {
+  background: var(--Black-4, rgba(0, 0, 0, 0.04));
+  transition: 0.5s;
+}
+
+.menu-position {
+  left: -93% !important;
+}
+.active-s {
+  color: #000;
+}
+.dropdown-item.active-s,
+.dropdown-item:active {
+  color: #000;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+}
+
+.lang-img {
+  border-radius: 1.5px;
+  border: 1px solid var(--stroke, rgba(0, 0, 0, 0.1));
+}
+.drop-show {
+  border-radius: 8px;
+  background: var(--White-White, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.img-flag {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 5px 2px 4px 2px;
+  justify-content: center;
+  align-items: center;
+}
+.link-feedback {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 48px;
+  margin: auto;
+  transition: background 0.3s;
+}
+.link-feedback:hover {
+  background: var(--Black-4, rgba(0, 0, 0, 0.04));
+}
+/* div.react-joyride__tooltip {
+  border-radius: 8px;
+}
+#button-primary {
+  border-radius: 8px;
+  background-color: var(--Black-4, rgba(0, 0, 0, 0.04));
+} */

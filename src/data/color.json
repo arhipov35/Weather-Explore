@@ -1,0 +1,37 @@
+[
+  {
+    "color": "white",
+    "text-color": "White",
+    "svg": "/img/img-color/white.svg"
+  },
+  {
+    "color": "var(--Red-03, linear-gradient(0deg, rgba(255, 0, 0, 0.03)0%, rgba(255, 0, 0, 0.03)100%), #FFF)",
+    "text-color": "Red",
+    "svg": "/img/img-color/red.svg"
+  },
+  {
+    "color": "var(--Orange-03, linear-gradient(0deg, rgba(255, 128, 0, 0.03)0%, rgba(255, 128, 0, 0.03)100%), #FFF)",
+    "text-color": "Orange",
+    "svg": "/img/img-color/orange.svg"
+  },
+  {
+    "color": "var(--Green-03, linear-gradient(0deg, rgba(128, 255, 0, 0.03)0%, rgba(128, 255, 0, 0.03)100%), #FFF)",
+    "text-color": "Green",
+    "svg": "/img/img-color/green.svg"
+  },
+  {
+    "color": "var(--Blue-03, linear-gradient(0deg, rgba(0, 170, 255, 0.03)0%, rgba(0, 170, 255, 0.03)100%), #FFF)",
+    "text-color": "Blue",
+    "svg": "/img/img-color/blue.svg"
+  },
+  {
+    "color": "var(--Violet-03, linear-gradient(0deg, rgba(0, 0, 255, 0.03)0%, rgba(0, 0, 255, 0.03)100%), #FFF)",
+    "text-color": "Violet",
+    "svg": "/img/img-color/violet.svg"
+  },
+  {
+    "color": "var(--Rose-03, linear-gradient(0deg, rgba(255, 0, 170, 0.03)0%, rgba(255, 0, 170, 0.03)100%), #FFF)",
+    "text-color": "Rose",
+    "svg": "/img/img-color/rose.svg"
+  }
+]
