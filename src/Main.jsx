@@ -17,7 +17,8 @@ function Main() {
 
 
     const key = 'bbe82e75bbbe6c6353822f8cc17b8452';
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=${key}`;
+    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=${key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(town.trim())}&units=metric&appid=${key}`;
 
     const dispatch = useDispatch();
     const error = useSelector((state) => state.states.error);
@@ -135,7 +136,8 @@ function Main() {
     const [changeCity, setChangeCity] = useState(null);
     const [newError, setNewError] = useState(null);
     const updateCard = async (event, index, newCity) => {
-        const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=${key}`;
+        // const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=${key}`;
+        const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(newCity.trim())}&units=metric&appid=${key}`;
         if ((event.key === "Enter" || event.type === 'click') && newCity.trim()) {
             setNewError(null);
             try {
@@ -220,7 +222,6 @@ function Main() {
     }, [hoverIndex]);
 
     const { runTour, handleJoyrideCallback, steps } = useOnboarding();
-
     return (
         <>
             <Joyride
@@ -276,7 +277,7 @@ function Main() {
                             </div>
                         </div>
                     ) : (
-                        <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-4" style={{ padding: '8px 0 32px 0' }}>
+                        <div  className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-4" style={{ padding: '8px 0 32px 0' }}>
                             {cards.map((cardCity, index) => (
                                 // прибрав margin-top:16px та додав transition
                                 <div onClick={() => handleCardClick(index)} style={{ padding: '0px 8px 0px 8px', transition: 'all 0.4s ease-in-out' }} key={index}

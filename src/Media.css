@@ -24,4 +24,13 @@
     --bs-gutter-x: 6rem;
   }
 } */
-
+@media (max-width: 767px) {
+  .addCity-content {
+    opacity: 1;
+  }
+  
+  .addCity:hover .addCity-content {
+    transform: none;
+    opacity: unset;
+  }
+}
