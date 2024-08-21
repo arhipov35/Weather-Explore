@@ -3,21 +3,13 @@ import './Header.css';
 import Joyride from 'react-joyride';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useSelector, useDispatch } from "react-redux";
-import { setBackgrnd } from '../store/colorSet';
-import { changeLang } from '../store/Language';
 import YouTubePlayer from './second_components/YouTubePlayer';
 import SelectColor from './second_components/SelectColor';
 import { useOnboarding } from '../OnboardingContext';
 function Header() {
-    //Зміна мови
-    const language = useSelector((state) => state.specificLanguage.language)
-    const selectedBackgrnd = useSelector((state) => state.ui.backgrnd); // Перевірте, чи використовуєте правильний ключ
-    const dispatch = useDispatch();
+    
+    const selectedBackgrnd = useSelector((state) => state.ui.backgrnd);
     const { runTour, handleJoyrideCallback, steps } = useOnboarding();
-    const handleLanguageChange = (lang) => {
-        dispatch(changeLang(lang));
-    };
-    // Кроки для онбордингу
 
     return (
         <>
@@ -41,7 +33,7 @@ function Header() {
                         borderRadius: '8px',
                     },
                     button: {
-                        borderRadius: '8px', // Додаємо заокруглення до кнопки
+                        borderRadius: '8px', 
                     }
                 }}
             />
@@ -56,7 +48,7 @@ function Header() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav ms-auto d-flex" style={{ gap: '16px' }}>
-                            {/* прибрав d-flex */}
+                            
                             <li className="align-items-center tune">
                                 <YouTubePlayer></YouTubePlayer>
                             </li>

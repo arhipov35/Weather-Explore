@@ -8,7 +8,6 @@ import './Components/WeatherCard.css'
 import WeatherIMG from "./Components/second_components/WeatherIMG";
 import { useOnboarding } from "./OnboardingContext";
 import Joyride from 'react-joyride';
-// import { setBackgrnd } from "./store/colorSet";
 import './Media.css'
 
 function Main() {
@@ -17,7 +16,6 @@ function Main() {
 
 
     const key = 'bbe82e75bbbe6c6353822f8cc17b8452';
-    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=${key}`;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(town.trim())}&units=metric&appid=${key}`;
 
     const dispatch = useDispatch();
@@ -26,15 +24,14 @@ function Main() {
     const hoverIndex = useSelector((state) => state.states.hoverIndex);
     const delet = useSelector((state) => state.states.delet);
     const selectedBackgrnd = useSelector((state) => state.ui.backgrnd);
-    // const [delet, setDelete] = useState(null);
     const [activeCardIndex, setActiveCardIndex] = useState(null);
     const [cards, setCards] = useState(() => {
-        // Ініціалізація з localStorage
+        // Initialize from localStorage
         const storedCards = JSON.parse(localStorage.getItem('cards'));
         return storedCards ? storedCards : Array(8).fill({ city: null, weather: null });
     });
 
-    //Формування картки
+    //Formation of the card
     const addCard = async (event, index) => {
         if ((event.key === "Enter" || event.type === 'click') && town.trim()) {
             dispatch(setError(null));
@@ -42,7 +39,6 @@ function Main() {
                 const response = await fetch(url);
                 const data = await response.json();
                 if (response.ok) {
-                    // Метод some є потужним інструментом для перевірки наявності принаймні одного елемента в масиві, який задовольняє певній умові
                     if (!cards.some(card => card.city === data.name)) {
                         const newCards = [...cards];
                         newCards[index] = { city: data.name, weather: data };
@@ -72,7 +68,7 @@ function Main() {
         setTown(city);
     }
     console.log(hoverIndex);
-    //перевірка чи потрібно будувати сітку 4 на 4
+    //check if a 4 by 4 grid should be built
     useEffect(() => {
         if (cards.every(card => card.city === null)) {
             dispatch(setVisible(true));
@@ -81,12 +77,12 @@ function Main() {
         }
     }, [cards]);
 
-    //Запис в localstarge
+    //Write to localstarge
     useEffect(() => {
         localStorage.setItem('cards', JSON.stringify(cards));
     }, [cards]);
 
-    // Видалення
+    // Delete
     const deleteCards = (town) => {
         const updatedCards = cards.map(card =>
             card.city === town ? { ...card, city: null, weather: null } : card
@@ -100,11 +96,11 @@ function Main() {
             setActiveCardIndex(index);
             dispatch(setError(null));
             setNewError(null);
-            setTown(''); // Очищення поля вводу при зміні картки
+            setTown(''); // Clearing the input field when changing the card
         }
     };
-    //Завантаження даних про погоду при монтуванні компонента
-    // Це асинхронна функція, яка буде завантажувати дані про погоду для всіх міст, що є у масиві cards.
+    //Loading weather data when mounting the component
+    // This is an asynchronous function that will load the weather data for all the cities in the cards array.
     const fetchWeatherData = async () => {
         const updatedCards = await Promise.all(cards.map(async (card) => {
             if (card.city) {
@@ -118,9 +114,9 @@ function Main() {
         setCards(updatedCards);
     };
 
-    //Для того щоб дані оновлювалися
+    //In order for the data to be updated
     useEffect(() => {
-        fetchWeatherData(); // Викликати fetchWeatherData при першому завантаженні
+        fetchWeatherData(); // Call fetch Weather Data on first load
     }, []);
 
 
@@ -136,7 +132,6 @@ function Main() {
     const [changeCity, setChangeCity] = useState(null);
     const [newError, setNewError] = useState(null);
     const updateCard = async (event, index, newCity) => {
-        // const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=${key}`;
         const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(newCity.trim())}&units=metric&appid=${key}`;
         if ((event.key === "Enter" || event.type === 'click') && newCity.trim()) {
             setNewError(null);
@@ -244,7 +239,7 @@ function Main() {
                         borderRadius: '8px',
                     },
                     button: {
-                        borderRadius: '8px', // Додаємо заокруглення до кнопки
+                        borderRadius: '8px',
                     }
                 }}
             />
@@ -277,7 +272,7 @@ function Main() {
                             </div>
                         </div>
                     ) : (
-                        <div  className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-4" style={{ padding: '8px 0 32px 0' }}>
+                        <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-4" style={{ padding: '8px 0 32px 0' }}>
                             {cards.map((cardCity, index) => (
                                 // прибрав margin-top:16px та додав transition
                                 <div onClick={() => handleCardClick(index)} style={{ padding: '0px 8px 0px 8px', transition: 'all 0.4s ease-in-out' }} key={index}

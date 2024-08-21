@@ -1,29 +1,4 @@
-/* @media (max-width: 1400px) {
-  .pos-x {
-    transform: translate(185px, 39px) !important;
-  }
-}
-@media (max-width: 1200px) {
-  .pos-x {
-    transform: translate(140px, 39px) !important;
-  }
-}
-@media (max-width: 767px) {
-  .pos-x {
-    transform: translate(168px, 39px) !important;
-  }
-}
-@media (max-width: 575px) {
-  .pos-x {
-    transform: translate(473px, 39px) !important;
-  }
-} */
-/* @media (min-width: 1200px) {
-  .g-4,
-  .gx-4 {
-    --bs-gutter-x: 6rem;
-  }
-} */
+
 @media (max-width: 767px) {
   .addCity-content {
     opacity: 1;

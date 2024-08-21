@@ -1,10 +1,8 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
 import './Select.css'
 
 
 function Select({ materilas, town, fun }) {
-    // Функція для фільтрації міст за введеним значенням `town`
+    // Function to filter cities by the entered `town` value
     const filteredCities = (country) => {
         if (town) {
             return materilas[country].filter(city =>
@@ -16,7 +14,7 @@ function Select({ materilas, town, fun }) {
         }
     }
 
-    // Функція для виведення відфільтрованих міст
+    // Function to output filtered cities
     function filtercity(filteredCities) {
         return (<>
             {filteredCities.map((city, index) => (

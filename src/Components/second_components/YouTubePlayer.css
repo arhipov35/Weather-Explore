@@ -11,18 +11,9 @@ input[type="range"] {
   position: relative;
 }
 
-/* input[type="range"]::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: grey;
-  border-radius: 5px;
-  z-index: 1;
-} */
 
-/* Стиль для повзунка (thumb) у браузерах на основі WebKit */
+
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -45,7 +36,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   background: black;
 }
 
-/* Mozilla браузери */
+
 input[type="range"]::-moz-range-thumb {
   width: 16px;
   height: 16px;
@@ -64,7 +55,7 @@ input[type="range"]:active::-moz-range-thumb {
   background: black;
 }
 
-/* Microsoft браузери */
+
 input[type="range"]::-ms-thumb {
   width: 16px;
   height: 16px;

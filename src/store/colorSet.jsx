@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import colors from '../data/color.json';
 
-// Завантаження збереженого кольору з localStorage або використання першого кольору з JSON
+
 const savedColor = JSON.parse(localStorage.getItem('selectedColor')) || colors[0] || {
     color: 'white',
     'text-color': 'White',
@@ -19,11 +19,11 @@ export const uiSlice = createSlice({
     reducers: {
         setColorSvg: (state, action) => {
             state.colorSvg = action.payload;
-            localStorage.setItem('selectedColor', JSON.stringify({ color: state.backgrnd, svg: state.colorSvg })); // Збереження в localStorage
+            localStorage.setItem('selectedColor', JSON.stringify({ color: state.backgrnd, svg: state.colorSvg }));
         },
         setBackgrnd: (state, action) => {
             state.backgrnd = action.payload;
-            localStorage.setItem('selectedColor', JSON.stringify({ color: state.backgrnd, svg: state.colorSvg })); // Збереження в localStorage
+            localStorage.setItem('selectedColor', JSON.stringify({ color: state.backgrnd, svg: state.colorSvg })); 
         }
     }
 });

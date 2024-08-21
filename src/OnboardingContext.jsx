@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Створюємо контекст
+
 const OnboardingContext = createContext();
 
 export const useOnboarding = () => useContext(OnboardingContext);
@@ -45,7 +45,7 @@ export const OnboardingProvider = ({ children }) => {
             target: '.card-main-content',
             content: `So let's get started, and enter your first city!`,
         },
-        // Додайте більше кроків, якщо потрібно
+   
     ];
 
     return (

@@ -118,10 +118,4 @@
 .link-feedback:hover {
   background: var(--Black-4, rgba(0, 0, 0, 0.04));
 }
-/* div.react-joyride__tooltip {
-  border-radius: 8px;
-}
-#button-primary {
-  border-radius: 8px;
-  background-color: var(--Black-4, rgba(0, 0, 0, 0.04));
-} */
+

@@ -8,7 +8,6 @@ function SelectColor() {
     const [isActive, setIsActive] = useState(false);
     const dispatch = useDispatch();
     const selectedColorSvg = useSelector((state) => state.ui.colorSvg);
-    const selectedBackgrnd = useSelector((state) => state.ui.backgrnd);
 
     const handleColorChange = (color) => {
         dispatch(setColorSvg(color.svg));

@@ -55,5 +55,5 @@
 }
 
 .wave-path {
-  transition: d 0.5s ease, stroke 0.5s ease; /* Додаємо перехід для stroke */
+  transition: d 0.5s ease, stroke 0.5s ease; 
 }

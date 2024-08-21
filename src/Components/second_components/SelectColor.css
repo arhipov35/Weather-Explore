@@ -29,12 +29,12 @@
 .dropdown-toggle {
   position: relative;
 }
-/* Сховати стандартний стрілку Bootstrap */
+
 .dropdown-toggle::after {
   display: none;
 }
 
-/* Додати SVG-елемент по центру кнопки */
+
 .dropdown-toggle.active::before {
   content: "";
   display: block;
@@ -47,7 +47,7 @@
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"%3E%3Cpath d="M1 1L5 5L9 1" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')
     no-repeat center center;
   background-size: contain;
-  /* opacity: 1; */
+
 }
 .dropdown-toggle::before {
   content: "";
@@ -61,7 +61,7 @@
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"%3E%3Cpath d="M1 1L5 5L9 1" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E')
     no-repeat center center;
   background-size: contain;
-  /* opacity: 0; */
+
   transition: opacity 0.2s linear;
 }
 .dropdown-toggle:hover:before {
@@ -94,12 +94,7 @@
   transition: background 0.3s;
 }
 
-/* .drop-style:hover::after {
-  display: none;
-}
-.dropdown-toggle::after {
-  display: none;
-} */
+
 .drop-menu-style {
   border-radius: 8px;
   border: 1px solid var(--Black-4, rgba(0, 0, 0, 0.04));

@@ -1,4 +1,3 @@
-// src/redux/statesSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const statesSlice = createSlice({
